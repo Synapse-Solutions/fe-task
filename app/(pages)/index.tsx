@@ -4,7 +4,7 @@ import { ProductsContextProvider } from "@/app/context/ProductsContextProvider";
 import ProductsGrid from "@/app/components/ProductsGrid";
 
 const IndexPage: React.FC = () => {
-  const [pageSize, setPageSize] = useState(10);
+  const [pageSize, setPageSize] = useState(20);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsArray, setProductsArray] = useState<any>([]);
   const { data, isLoading, refetch } = useQuery(
