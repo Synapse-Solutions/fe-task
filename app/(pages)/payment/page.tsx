@@ -27,7 +27,7 @@ const PaymentPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto text-black">
       <h1 className="text-3xl font-bold my-8">Payment</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input

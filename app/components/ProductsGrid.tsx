@@ -9,7 +9,7 @@ const ProductsGrid: React.FC = () => {
   const { data } = useProductsContext();
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-4 text-black">
       {data?.map((product: any) => (
         <div
           onClick={() => router.push(`/payment`)}

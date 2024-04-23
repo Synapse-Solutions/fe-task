@@ -32,7 +32,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <ProductsContextProvider data={productsArray}>
-      <div className="container mx-auto">
+      <div className="container mx-auto text-black">
         <h1 className="text-3xl font-bold my-8">Products</h1>
         {isLoading && productsArray.length === 0 ? (
           <p>Loading...</p>
