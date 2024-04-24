@@ -31,7 +31,7 @@ const PaymentPage: React.FC = () => {
       <h1 className="text-3xl font-bold my-8 text-center">Payment</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
         <input
-          type="text"
+          type="number"
           {...register("cardNumber")}
           placeholder="Card Number"
           className="my-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
@@ -55,7 +55,7 @@ const PaymentPage: React.FC = () => {
         )}
 
         <input
-          type="text"
+          type="number"
           {...register("cvv")}
           placeholder="CVV"
           className="my-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"

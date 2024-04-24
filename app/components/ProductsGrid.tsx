@@ -5,13 +5,14 @@ import { useProductsContext } from "@/app/context/ProductsContextProvider";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import ReactStars from "react-stars";
+import Link from "next/link";
 
 const ProductsGrid: React.FC = () => {
   const router = useRouter();
   const { data } = useProductsContext();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 text-black">
+    <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 text-black px-10 md:px-0">
       {data?.map((product: any) => (
         <div
           onClick={() => router.push(`/payment`)}
@@ -49,7 +50,7 @@ const ProductsGrid: React.FC = () => {
               />
             </div>
             <button className="bg-blue-500 text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out hover:bg-blue-600">
-              <a href={`/payment`}>Buy Now</a>
+              <Link href={`/payment`}>Buy Now</Link>
             </button>
           </div>
         </div>
