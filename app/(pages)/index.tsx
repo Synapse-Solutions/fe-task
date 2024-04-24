@@ -35,7 +35,9 @@ const IndexPage: React.FC = () => {
       <div className="container mx-auto text-black">
         <h1 className="text-3xl font-bold my-8">Products</h1>
         {isLoading && productsArray.length === 0 ? (
-          <p>Loading...</p>
+          <div className="h-screen w-full flex items-center justify-center">
+            <p className="text-[40px] font-bold">Loading...</p>
+          </div>
         ) : (
           <>
             <ProductsGrid />

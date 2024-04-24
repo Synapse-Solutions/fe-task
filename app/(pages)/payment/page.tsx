@@ -27,14 +27,14 @@ const PaymentPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto text-black">
-      <h1 className="text-3xl font-bold my-8">Payment</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="container mx-auto text-black flex flex-col w-full h-screen items-center justify-center">
+      <h1 className="text-3xl font-bold my-8 text-center">Payment</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
         <input
           type="text"
           {...register("cardNumber")}
           placeholder="Card Number"
-          className="my-2 p-2"
+          className="my-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
         />
         {errors?.cardNumber?.message && (
           <span className="text-red-500">
@@ -46,7 +46,7 @@ const PaymentPage: React.FC = () => {
           type="text"
           {...register("expiry")}
           placeholder="Expiry (MM/YY)"
-          className="my-2 p-2"
+          className="my-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
         />
         {errors?.expiry?.message && (
           <span className="text-red-500">
@@ -58,13 +58,16 @@ const PaymentPage: React.FC = () => {
           type="text"
           {...register("cvv")}
           placeholder="CVV"
-          className="my-2 p-2"
+          className="my-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
         />
         {errors?.cvv?.message && (
           <span className="text-red-500">{errors.cvv.message.toString()}</span>
         )}
 
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 mt-4">
+        <button
+          type="submit"
+          className="bg-blue-500 text-white py-3 px-6 mt-6 w-full rounded-md transition duration-300 ease-in-out hover:bg-blue-600"
+        >
           Submit
         </button>
       </form>
